@@ -1,4 +1,4 @@
-AmpMenus
+AmpMenus (Forked to work with newer versions)
 ========
 
 An object-oriented approach to handling Inventory Menus/GUIs in Bukkit.
