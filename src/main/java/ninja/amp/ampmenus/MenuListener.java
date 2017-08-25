@@ -58,6 +58,12 @@ public class MenuListener implements Listener {
             ((MenuHolder) event.getInventory().getHolder()).getMenu().onInventoryClick(event);
         }
     }
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onInventoryClose(InventoryCloseEvent e) {
+        if(event.getInventory().getHolder() instanceof MenuHolder) {
+            ((MenuHolder) event.getInventory().getHolder()).getMenu().close();
+        }
+    }
 
     /**
      * Registers the events of the {@link ninja.amp.ampmenus.MenuListener} to a plugin.
