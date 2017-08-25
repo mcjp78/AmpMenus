@@ -41,6 +41,7 @@ public class ItemMenu {
     private Size size;
     private MenuItem[] items;
     private ItemMenu parent;
+    private Runnable onClose;
 
     /**
      * The {@link ninja.amp.ampmenus.items.StaticMenuItem} that appears in empty slots if {@link ninja.amp.ampmenus.menus.ItemMenu#fillEmptySlots()} is called.
@@ -253,6 +254,9 @@ public class ItemMenu {
         size = null;
         items = null;
         parent = null;
+    }
+    public void setOnClose(Runnable r) {
+        this.onClose = r;
     }
 
     /**
