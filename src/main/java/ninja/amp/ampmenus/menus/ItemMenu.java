@@ -258,6 +258,9 @@ public class ItemMenu {
     public void setOnClose(Runnable r) {
         this.onClose = r;
     }
+    public void close() {
+        onClose.run()
+    }
 
     /**
      * Possible sizes of an {@link ninja.amp.ampmenus.menus.ItemMenu}.
