@@ -59,7 +59,7 @@ public class MenuListener implements Listener {
         }
     }
     @EventHandler(priority = EventPriority.HIGHEST)
-    public void onInventoryClose(InventoryCloseEvent e) {
+    public void onInventoryClose(InventoryCloseEvent event) {
         if(event.getInventory().getHolder() instanceof MenuHolder) {
             ((MenuHolder) event.getInventory().getHolder()).getMenu().close();
         }
