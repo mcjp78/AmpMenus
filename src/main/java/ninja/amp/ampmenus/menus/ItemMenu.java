@@ -259,7 +259,7 @@ public class ItemMenu {
         this.onClose = r;
     }
     public void close() {
-        onClose.run()
+        onClose.run();
     }
 
     /**
