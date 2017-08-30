@@ -210,7 +210,7 @@ public class ItemMenu {
     @SuppressWarnings("deprecation")
     public void onInventoryClick(InventoryClickEvent event) {
         if (event.getClick() == ClickType.LEFT) {
-            int slot = event.getRawSlot();
+            int slot = event.getSlot();
             if (slot >= 0 && slot < size.getSize() && items[slot] != null) {
                 Player player = (Player) event.getWhoClicked();
                 ItemClickEvent itemClickEvent = new ItemClickEvent(player);
