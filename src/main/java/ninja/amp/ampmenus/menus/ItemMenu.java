@@ -42,6 +42,7 @@ public class ItemMenu {
     private MenuItem[] items;
     private ItemMenu parent;
     private Runnable onClose;
+    private boolean selfClose;
 
     /**
      * The {@link ninja.amp.ampmenus.items.StaticMenuItem} that appears in empty slots if {@link ninja.amp.ampmenus.menus.ItemMenu#fillEmptySlots()} is called.
@@ -219,6 +220,7 @@ public class ItemMenu {
                 } else {
                     player.updateInventory();
                     if (itemClickEvent.willClose() || itemClickEvent.willGoBack()) {
+                        selfClose = true;
                         final String playerName = player.getName();
                         Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
                             public void run() {
@@ -259,7 +261,7 @@ public class ItemMenu {
         this.onClose = r;
     }
     public void close() {
-        onClose.run();
+      if(!selfClose)  onClose.run();
     }
 
     /**
