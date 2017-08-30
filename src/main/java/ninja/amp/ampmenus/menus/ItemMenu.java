@@ -227,6 +227,7 @@ public class ItemMenu {
                                 Player p = Bukkit.getPlayerExact(playerName);
                                 if (p != null) {
                                     p.closeInventory();
+                                    System.out.println("[AmpMenus] Closing the inventory for player " + p.getName())
                                 }
                             }
                         }, 1);
